@@ -17,8 +17,8 @@
             <option value="admin"<?php if($user->getType() == "admin"){?> selected <?php }?>>Administrador</option>
             <option value="user" <?php if($user->getType() == "user"){?> selected <?php }?>>Usuário comum</option>
         </select>
-        <input type="password" name="password">
-        <input type="password" name="password_confirmation">
+        <input type="password" name="password" placeholder="Digite a senha">
+        <input type="password" name="password_confirmation" placeholder="Confirme a senha">
         <button type="submit"> Editar </button>        
     </form>
 </html>

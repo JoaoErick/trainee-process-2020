@@ -7,6 +7,7 @@
 
         public function index()
         {
+            header("location: /Treinamento2020/views/admin/user/index.php");
         }
 
         public function create()
@@ -33,7 +34,8 @@
         public function update($id)
         {
             $user = User::get($id);
-            //User::update($user['id'], $user['name'], $user['email'], $user['type'], $user['password']);
+
+            User::update($user->getId(), $_POST['name'], $_POST['email'], $_POST['type'], $_POST['password']);
         }
 
         public function delete($id)

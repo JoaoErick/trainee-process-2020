@@ -31,7 +31,7 @@ class User{
 
     public static function get($id){
         $connection = Connection::getConnection();
-        $query = "select * from users where id = '{$id}'";
+        $query = "select * from users where id = {$id[0]}";
         $result = mysqli_query($connection, $query);
 
         if(mysqli_num_rows($result) == 1){
@@ -69,10 +69,11 @@ class User{
     public static function delete($id){
     }
 
-    public static function update($id, $name, $email, $type, $password, $password_confirmation){
-        $user = self::get($id);
+    /* Finalizar o método com o password_confirmation */
+    public static function update($id, $name, $email, $type, $password/* $password_confirmation*/){
         $connection = Connection::getConnection();
-        $query = "update users set name = '{$name}', email = '{$email}', type = '{$type}', password = '{$password}' where id = '{$user[0]}'";
+        $query = "update users set name = '{$name}', email = '{$email}', type = '{$type}', password = '{$password}' where id = '{$id}'";
+        $result = mysqli_query($connection, $query);
     }
 
     public function getId(){
