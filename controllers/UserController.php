@@ -56,6 +56,7 @@
             $user = User::find($_POST['email'], $_POST['password']);
             if ($user) {
             $_SESSION['user'] = $user;
+            $_SESSION['message'] = "";
             header("location: /Treinamento2020/views/admin/dashboard.php");
             } else {
             header("location: /Treinamento2020/views/login.php");
@@ -71,6 +72,10 @@
 
         public static function verifyAdmin()
         {
+            if($_SESSION['user']->getType() != 'admin'){
+                $_SESSION['message'] = 'Você não tem permissão para isso!';
+                header("location: /Treinamento2020/views/admin/dashboard.php");
+            }
         }
 
         public static function logout()
