@@ -7,14 +7,16 @@ class User{
     private $type;
     private $password;
 
-    public function __construct($id, $name, $email, $type){
+    public function __construct($id, $name, $email, $type)
+    {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->type = $type;
     }
 
-    public static function find($email, $password){
+    public static function find($email, $password)
+    {
         /* Procura no banco e retorna true ou false */
         $connection = Connection::getConnection();
         $query = "select * from users where email = '{$email}' and password = '{$password}'";
@@ -29,7 +31,8 @@ class User{
         }
     }
 
-    public static function get($id){
+    public static function get($id)
+    {
         $connection = Connection::getConnection();
         $query = "select * from users where id = {$id[0]}";
         $result = mysqli_query($connection, $query);
@@ -43,7 +46,8 @@ class User{
         }
     }
 
-    public static function create($name, $email, $type, $password){
+    public static function create($name, $email, $type, $password)
+    {
         /* Verificar se já existe esse email */
         $connection = Connection::getConnection();
         $query = "insert into users(name, email, type, password) values('{$name}', '{$email}', '{$type}', '{$password}')";
@@ -51,7 +55,8 @@ class User{
     
     }
 
-    public static function all(){
+    public static function all()
+    {
         $connection = Connection::getConnection();
         $query = "select * from users";
         $result = mysqli_query($connection, $query);
@@ -66,49 +71,63 @@ class User{
 
     }
 
-    public static function delete($id){
+    public static function delete($id)
+    {
+        $connection = Connection::getConnection();
+        $query = "delete from users where id = '{$id}'";
+        $result = mysqli_query($connection, $query);
     }
 
     /* Finalizar o método com o password_confirmation */
-    public static function update($id, $name, $email, $type, $password/* $password_confirmation*/){
+    public static function update($id, $name, $email, $type, $password/* $password_confirmation*/)
+    {
         $connection = Connection::getConnection();
         $query = "update users set name = '{$name}', email = '{$email}', type = '{$type}', password = '{$password}' where id = '{$id}'";
         $result = mysqli_query($connection, $query);
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
     
-    public function getType(){
+    public function getType()
+    {
         return $this->type;
     }
 
-    public function getName(){
+    public function getName()
+    {
         return $this->name;
     }
     
-    public function getEmail(){
+    public function getEmail()
+    {
         return $this->email;
     }
     
-    public function getPassword(){
+    public function getPassword()
+    {
         return $this->password;
     }
 
-    public function setType($name){
+    public function setType($name)
+    {
         $this->name = $name;
     }
 
-    public function setName($name){
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function setEmail($email){
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function setPassword($password){
+    public function setPassword($password)
+    {
         $this->password = $password;
     }
 }
