@@ -40,6 +40,9 @@
 
         public function delete($id)
         {
+            $user = User::get($id);
+
+            User::delete($user->getId());
         }
 
         public static function all()
