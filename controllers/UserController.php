@@ -29,6 +29,7 @@
 
         public function profile()
         {
+            header("location: /Treinamento2020/views/admin/user/profile.php");
         }
 
         public function update($id)
