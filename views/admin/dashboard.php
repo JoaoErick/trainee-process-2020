@@ -19,4 +19,13 @@
         }
     ?>
         <a href="/Treinamento2020/user/profile">Meu Perfil</a>
+
+        <?php 
+            if($_SESSION['message'] != ""){
+        ?>
+                <script>alert('<?php echo $_SESSION['message']?>')</script>
+        <?php
+            $_SESSION['message'] = "";
+            }
+        ?>
 </div>
