@@ -78,12 +78,20 @@ class User{
         $result = mysqli_query($connection, $query);
     }
 
-    /* Finalizar o método com o password_confirmation */
-    public static function update($id, $name, $email, $type, $password/* $password_confirmation*/)
+    public static function update($id, $name, $email, $type, $password, $password_confirmation)
     {
         $connection = Connection::getConnection();
-        $query = "update users set name = '{$name}', email = '{$email}', type = '{$type}', password = '{$password}' where id = '{$id}'";
-        $result = mysqli_query($connection, $query);
+        if( $password != "" && $password_confirmation != "" )
+        {
+            $query = "update users set name = '{$name}', email = '{$email}', type = '{$type}', password = '{$password}' where id = '{$id}'";
+            $result = mysqli_query($connection, $query);
+        }
+        else
+        {
+            $query = "update users set name = '{$name}', email = '{$email}', type = '{$type}' where id = '{$id}'";
+            $result = mysqli_query($connection, $query);
+        }
+        
     }
 
     public function getId()
