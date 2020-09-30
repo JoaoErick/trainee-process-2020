@@ -34,7 +34,7 @@ class User{
     public static function get($id)
     {
         $connection = Connection::getConnection();
-        $query = "select * from users where id = {$id[0]}";
+        $query = "select * from users where id = {$id}";
         $result = mysqli_query($connection, $query);
 
         if(mysqli_num_rows($result) == 1){
@@ -74,7 +74,7 @@ class User{
     public static function delete($id)
     {
         $connection = Connection::getConnection();
-        $query = "delete from users where id = '{$id}'";
+        $query = "delete from users where id = {$id}";
         $result = mysqli_query($connection, $query);
     }
 

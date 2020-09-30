@@ -34,7 +34,7 @@
 
         public function update($id)
         {
-            $user = User::get($id);
+            $user = User::get($id[0]);
             
             User::update($user->getId(), $_POST['name'], $_POST['email'], $_POST['type'], $_POST['password'], $_POST['password_confirmation']);
             $_SESSION['message'] = 'Dados atualizados com sucesso!';
@@ -51,7 +51,7 @@
 
         public function delete($id)
         {
-            $user = User::get($id);
+            $user = User::get($id[0]);
 
             User::delete($user->getId());
             header("location: /Treinamento2020/views/admin/user/index.php");
