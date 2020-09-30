@@ -8,7 +8,7 @@
 
 
 <html>
-    <form action="/Treinamento2020/user/store" method="post">
+    <form action="/Treinamento2020/user/store" method="post" onsubmit="return validarSenha()" name="form">
         <input name="name" placeholder="name" required>
         <input type="email" name="email" placeholder="email">
         <select name="type" required>
@@ -20,4 +20,17 @@
         <input type="password" name="password_confirmation" placeholder="Confirme sua senha">
         <button type="submit"> Cadastrar </button>        
     </form>
+    <script>
+        function validarSenha(){
+            senha = document.form.password.value;
+            confirma_senha = document.form.password_confirmation.value;
+            if (senha == confirma_senha){
+                return true;
+            }
+            else{ 
+                alert("As senhas não são compatíveis!");
+                return false;
+            }
+        }
+    </script>
 </html>
