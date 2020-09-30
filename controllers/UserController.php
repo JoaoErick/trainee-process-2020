@@ -17,9 +17,9 @@
 
         public function store()
         {
-            if($_POST['password_confirmation']){}
             User::create($_POST['name'], $_POST['email'], $_POST['type'], $_POST['password']);
             header("location: /Treinamento2020/views/admin/user/index.php");
+            $_SESSION['message'] = 'Cadastro realizado com sucesso!';
         }
 
         public function edit($id)
@@ -39,10 +39,12 @@
             User::update($user->getId(), $_POST['name'], $_POST['email'], $_POST['type'], $_POST['password'], $_POST['password_confirmation']);
             $_SESSION['message'] = 'Dados atualizados!';
             
-            if($user->getType() == 'admin'){
+            if($_SESSION['user']->getType() == 'admin')
+            {
                 header("location: /Treinamento2020/views/admin/user/index.php");
             }
-            else{
+            else
+            {
                 header("location: /Treinamento2020/views/admin/dashboard.php");
             }
         }
@@ -62,25 +64,30 @@
         public function check()
         {
             $user = User::find($_POST['email'], $_POST['password']);
-            if ($user) {
-            $_SESSION['user'] = $user;
-            $_SESSION['message'] = "";
-            header("location: /Treinamento2020/views/admin/dashboard.php");
-            } else {
-            header("location: /Treinamento2020/views/login.php");
+            if ($user) 
+            {
+                $_SESSION['user'] = $user;
+                $_SESSION['message'] = "";
+                header("location: /Treinamento2020/views/admin/dashboard.php");
+            } 
+            else 
+            {
+                header("location: /Treinamento2020/views/login.php");
             }
         }
 
         public static function verifyLogin()
         {
-            if($_SESSION["user"] == null){
+            if($_SESSION["user"] == null)
+            {
                 header("location: /Treinamento2020/views/login.php");
             }
         }
 
         public static function verifyAdmin()
         {
-            if($_SESSION['user']->getType() != 'admin'){
+            if($_SESSION['user']->getType() != 'admin')
+            {
                 $_SESSION['message'] = 'Você não tem permissão para isso!';
                 header("location: /Treinamento2020/views/admin/dashboard.php");
             }
