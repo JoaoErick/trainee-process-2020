@@ -60,9 +60,9 @@ echo "<br>";
 
 <?php 
     if($_SESSION['message'] != ""){
-?>
-        <script>alert('<?php echo $_SESSION['message']?>')</script>
-<?php
+        echo "<br>";
+        echo "[ ". $_SESSION['message'] ." ]";
+
         $_SESSION['message'] = "";
     }
 ?>
