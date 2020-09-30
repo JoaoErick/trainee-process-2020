@@ -16,8 +16,8 @@
             <option value="admin">Administrador</option>
             <option value="user">Usuário comum</option>
         </select>
-        <input type="password" name="password" placeholder="Selecione sua senha">
-        <input type="password" name="password_confirmation" placeholder="Confirme sua senha">
+        <input type="password" name="password" placeholder="Selecione sua senha" required>
+        <input type="password" name="password_confirmation" placeholder="Confirme sua senha" required>
         <button type="submit"> Cadastrar </button>        
     </form>
     <script>
