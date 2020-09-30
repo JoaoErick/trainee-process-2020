@@ -37,7 +37,14 @@
             $user = User::get($id);
             
             User::update($user->getId(), $_POST['name'], $_POST['email'], $_POST['type'], $_POST['password'], $_POST['password_confirmation']);
-            header("location: /Treinamento2020/views/admin/user/index.php");
+            $_SESSION['message'] = 'Dados atualizados!';
+            
+            if($user->getType() == 'admin'){
+                header("location: /Treinamento2020/views/admin/user/index.php");
+            }
+            else{
+                header("location: /Treinamento2020/views/admin/dashboard.php");
+            }
         }
 
         public function delete($id)
