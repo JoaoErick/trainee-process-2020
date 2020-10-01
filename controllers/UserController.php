@@ -17,9 +17,11 @@
 
         public function store()
         {
-            User::create($_POST['name'], $_POST['email'], $_POST['type'], $_POST['password']);
-            header("location: /Treinamento2020/views/admin/user/index.php");
-            $_SESSION['message'] = 'Cadastro realizado com sucesso!';
+            $message = User::create($_POST['name'], $_POST['email'], $_POST['type'], $_POST['password']);
+            $message['success'] 
+                ? header("location: /Treinamento2020/views/admin/user/index.php")
+                : header("location: /Treinamento2020/views/admin/user/create.php");
+            $_SESSION['message'] = $message['message'];
         }
 
         public function edit($id)
@@ -36,17 +38,18 @@
         {
             $user = User::get($id[0]);
             
-            User::update($user->getId(), $_POST['name'], $_POST['email'], $_POST['type'], $_POST['password'], $_POST['password_confirmation']);
-            $_SESSION['message'] = 'Dados atualizados com sucesso!';
-            
-            if($_SESSION['user']->getType() == 'admin')
+            $message = User::update($user->getId(), $_POST['name'], $_POST['email'], $_POST['type'], $_POST['password'], $_POST['password_confirmation']);
+            if($message['success'])
             {
-                header("location: /Treinamento2020/views/admin/user/index.php");
+                ($_SESSION['user']->getType() == 'admin') 
+                    ? header("location: /Treinamento2020/views/admin/user/index.php")
+                    : header("location: /Treinamento2020/views/admin/dashboard.php"); 
             }
             else
             {
-                header("location: /Treinamento2020/views/admin/dashboard.php");
+                header("location: /Treinamento2020/views/admin/user/profile.php");
             }
+            $_SESSION['message'] = $message['message'];
         }
 
         public function delete($id)

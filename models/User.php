@@ -48,10 +48,21 @@ class User{
 
     public static function create($name, $email, $type, $password)
     {
-        /* Verificar se já existe esse email */
+        if(self::findEmail($email))
+        {
+            return [
+                'success' => false,
+                'message' => 'Este e-mail já está sendo usado!'
+            ];
+        }
+
         $connection = Connection::getConnection();
         $query = "insert into users(name, email, type, password) values('{$name}', '{$email}', '{$type}', '{$password}')";
         $result = mysqli_query($connection, $query);
+        return [
+            'success' => true,
+            'message' => 'Cadastro realizado com sucesso!'
+        ];
     
     }
 
@@ -80,6 +91,14 @@ class User{
 
     public static function update($id, $name, $email, $type, $password, $password_confirmation)
     {
+        if(self::findEmailWhere_Id_isDiferent($email, $id))
+        {
+            return [
+                'success' => false,
+                'message' => 'Este e-mail já está sendo usado!'
+            ];
+        }
+
         $connection = Connection::getConnection();
         if( $password != "" && $password_confirmation != "" )
         {
@@ -91,7 +110,43 @@ class User{
             $query = "update users set name = '{$name}', email = '{$email}', type = '{$type}' where id = '{$id}'";
             $result = mysqli_query($connection, $query);
         }
+        return [
+            'success' => true,
+            'message' => 'Dados atualizados com sucesso!'
+        ];
         
+    }
+
+    /* Busca o e-mail no banco que seja igual ao passado */
+    public static function findEmail($email){
+        $connection = Connection::getConnection();
+        $query = "select * from users where email = '{$email}'";
+        $result = mysqli_query($connection, $query);
+        
+        if(mysqli_num_rows($result) == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /* Busca o e-mail no banco que seja igual ao passado e que seu id seja diferente do passado */
+    public static function findEmailWhere_Id_isDiferent($email, $id){
+        $connection = Connection::getConnection();
+        $query = "select * from users where email = '{$email}' and id <> '{$id}'";
+        $result = mysqli_query($connection, $query);
+        
+        if(mysqli_num_rows($result) == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public function getId()
