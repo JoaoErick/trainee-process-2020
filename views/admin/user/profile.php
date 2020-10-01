@@ -20,6 +20,16 @@
         <input type="password" name="password_confirmation" placeholder="Confirme a senha">
         <button type="submit"> Editar </button>        
     </form>
+
+    <?php 
+        if($_SESSION['message'] != ""){
+            echo "<br>";
+            echo "[ ". $_SESSION['message'] ." ]";
+
+            $_SESSION['message'] = "";
+        }
+    ?>
+
     <script>
         function validarSenha(){
             senha = document.form.password.value;
