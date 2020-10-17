@@ -6,6 +6,9 @@
 
 <p align="center">Aplicação web destinada ao processo trainee da EcompJr como forma de avaliar o desenvolvimento pessoal em programação web para a efetivação na empresa.</p>
 
+<div align="center" >
+  <img src="./assets-for-readme/login-page.png" alt="demo-web" height="425">
+</div>
 
 
 ## 🚀 Tecnologias
