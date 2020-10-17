@@ -19,6 +19,8 @@ Este projeto foi desenvolvido com o auxílio das tecnologias:
 
 - ✔️ MySQL  
 
+- ✔️ Google Fonts 
+
 ## 🙋🏾‍♂️ Autor  
 João Erick Barbosa
 
