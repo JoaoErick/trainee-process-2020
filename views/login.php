@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Trainee</title>
-    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/style-login.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/trainee-ecompjr-favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
         </form>
         
        
-        <p>© 2020 Copyright <b>TRAINEE ECOMPJR</b>. Todos os direitos reservados | by João Erick Barbosa. </p>
+        <p>© 2020 Copyright <b>TRAINEE ECOMPJR</b>. Todos os direitos reservados. </p>
       
     </section> 
 </body>
