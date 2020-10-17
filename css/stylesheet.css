@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none;
+    border: none;
+
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            -box-sizing: border-box;
+}
+body{
+    background: #f7f7f7;
+}
+
+/**
+ * ==============================================
+ * stylesheet to login pages
+ * ==============================================
+ */
+div.background{
+    position: absolute;
+    left: 0;
+    width: calc(100% - 500px);
+    height: 100%;
+    background-image: url(../assets/background-login.png);
+    background-size: cover;
+}
+
+ section#conteudo-view{
+     position: absolute;
+     right: 0;
+     padding: 80px;
+     float: right;
+     width: 500px;
+     height: 100%;
+     background: #fff;
+     border-left: 5px solid #e9e9e9;
+     box-shadow: 0 0 15px rgba(0, 0, 0, .55);
+ }
+
+ section#conteudo-view img{
+    float: left;
+    width: 380px;
+    margin-top: 20px;
+    border-radius: 5px;
+ }
+
+ section#conteudo-view h1{
+    float: left;
+    width: 100%;
+    font: 4.2em 'Poppins', cursive;
+    color: #0070BB;
+    margin-top: 20px;
+    margin-left: 5px;
+ }
+
+ section#conteudo-view h3{
+    float: left;
+    width: 100%;
+    font: 1.4em 'Calibri', cursive;
+    font-weight: 700;
+    color: #0070BB;
+ }
+
+ section#conteudo-view form{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 60px;
+ }
+
+section#conteudo-view form input,
+section#conteudo-view form button{
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 20px;
+    border: 3px solid #005E9D;
+    color: #005E9D;
+    font: 1.2em 'Arial';
+}
+
+section#conteudo-view form button{
+    width: 60%;
+    float: right;
+    background: #005E9D;
+    text-align: center;
+    color: #fff;
+    font: 1.4em 'Poppins', cursive;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section#conteudo-view form button:hover{
+    background: #008CEA;
+    border: 3px solid #008CEA;
+}
+
+::-webkit-input-placeholder {
+    color: #005E9D;
+ }
+
+ section#conteudo-view p{
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     margin-bottom: 20px;
+     text-align: center;
+     color: #005E9D;
+     font: 1em 'Arial';
+ }
+
+ @media(max-height: 580px){
+    section#conteudo-view p{ 
+        visibility: hidden;
+    }
+ }
+
