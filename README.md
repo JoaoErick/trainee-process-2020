@@ -21,8 +21,11 @@ Este projeto foi desenvolvido com o auxílio das tecnologias:
 
 - ✔️ Google Fonts 
 
+- ✔️ Bootstrap
+
 ## 🙋🏾‍♂️ Autor  
-João Erick Barbosa
+João Erick Barbosa (Back-end, Front-end)
+Allan Capistrano (Front-end)
 
 ## 😉 Onde me encontrar?
 <a href="https://github.com/JoaoErick">
