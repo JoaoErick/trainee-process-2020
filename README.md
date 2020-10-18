@@ -23,8 +23,9 @@ Este projeto foi desenvolvido com o auxílio das tecnologias:
 
 - ✔️ Bootstrap
 
-## 🙋🏾‍♂️ Autor  
+## 🙋🏾‍♂️ Autores
 João Erick Barbosa (Back-end, Front-end)
+
 Allan Capistrano (Front-end)
 
 ## 😉 Onde me encontrar?
