@@ -7,6 +7,6 @@ class HomeController{
     }
 
     public function index(){
-        header("Location:/Treinamento2020/views/home.php");
+        header("Location:/Treinamento2020/views/login.php");
     }
 }
