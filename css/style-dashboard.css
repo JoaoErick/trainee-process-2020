@@ -1,0 +1,165 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Section Home */
+  section#home {
+    position: relative;
+    text-align: center;
+  }
+  
+  section#home img {
+    width: 100%;
+  }
+  
+  section#home .text-center{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  section#home .text-center p#company-name {
+    color: #0070BB;
+    font-weight: bolder;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  section#home .text-center p#company-slogan {
+    color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  
+  @media(max-width: 999px) {
+    section#home .text-center p#company-name {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    section#home .text-center p#company-slogan {
+      font-size: 3rem;
+    }
+  }
+  
+  @media(max-width: 815px) {
+    section#home .text-center p#company-name {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    section#home .text-center p#company-slogan {
+      font-size: 2rem;
+    }
+  }
+  
+  @media(max-width: 575px) {
+    section#home .text-center p#company-name {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    section#home .text-center p#company-slogan {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /*Section About*/
+  .about {
+    margin-top: 150px;
+  }
+  
+  .about h1 {
+    color: #005E9D;
+    font-weight: bold;
+  }
+  
+  .about p {
+    color: #757781;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  /*Section Pillars*/
+  .pillars section + section {
+    margin-top: 70px;
+  }
+  
+  .pillars i {
+    font-size: 10rem;
+    color: #005E9D;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pillars h2 {
+    color: #005E9D;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .pillars p {
+    color: #757781;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .pillars p span{
+    color: #53555a;
+    font-weight: bolder;
+  }
+  
+  @media(max-width: 999px) {
+    .col-icon img {
+      width: 200px;
+    }
+  }
+  
+  @media(max-width: 815px) {
+    .about h1 {
+      font-size: 2rem;
+    }
+  
+    .pillars h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about p {
+      font-size: 1rem;
+    }
+  
+    .pillars p{
+      font-size: .9rem;
+    }
+  
+    .col-icon img {
+      width: 180px;
+    }
+  }
+  
+  @media(max-width: 659px) {
+    .about h1 {
+      font-size: 1.5rem;
+    }
+  
+    .pillars h2 {
+      font-size: 1rem;
+    }
+  
+    .about p {
+      font-size: .7rem;
+    }
+  
+    .pillars p {
+      font-size: .6rem;
+    }
+  
+    .col-icon img {
+      width: 100px;
+    }
+  
+    .pillars i {
+      font-size: 5rem;
+    }
+  }
