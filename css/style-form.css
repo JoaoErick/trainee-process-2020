@@ -1,0 +1,117 @@
+.form-group {
+  margin-top: 14rem;
+}
+
+.row-form {
+  margin-bottom: 1rem;
+}
+
+input, 
+select, 
+.btn-submit button {
+  color: #fff;
+  background-color: #008CEB;
+  border-radius: 8px ;
+  border: none;
+  height: 3.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+input:hover {
+  background-color: #0070BB;
+}
+
+input:focus, 
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+/* Placeholder do input */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+}
+/* ------------------- */
+
+select, 
+.btn-submit button {
+  background-color: #0070BB;
+  width: 48.8%;
+}
+
+option {
+  background-color: #0070BB;
+  font-weight: bold;
+}
+
+.btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-submit button {
+  height: 3.5rem;
+  width: 28%;
+  margin: 2rem 0;
+  transition: 0.3s;
+}
+
+button:hover,
+select:hover {
+  background-color: #008CEB;
+}
+
+@media(max-width: 1090px) {
+  select {
+    width: 48.5%;
+  }
+}
+
+@media(max-width: 880px) {
+  select {
+    width: 48%;
+  }
+}
+
+@media(max-width: 766px) {
+  .form-group {
+    margin-top: 10rem;
+  }
+
+  .row-form {
+    margin-bottom: 0;
+  }
+
+  input, 
+  select {
+    margin-bottom: 1rem;
+  }
+
+  select {
+    width: 100%;
+  }
+  
+  .btn-submit button {
+    margin: 1rem 0 2rem;
+  }
+
+  .footer-section {
+    position: unset;
+  }
+
+}
