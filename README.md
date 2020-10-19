@@ -23,10 +23,14 @@ Este projeto foi desenvolvido com o auxílio das tecnologias:
 
 - ✔️ Bootstrap
 
+
+## 📊 Prototipação ##
+[Prototipação - Figma](https://www.figma.com/file/OSIzWYwfRGPGlT3Rl3BDOq/Trainee-EcompJr?node-id=0%3A1)
+
 ## 🙋🏾‍♂️ Autores
 João Erick Barbosa (Back-end, Front-end)
 
-Allan Capistrano (Front-end)
+Allan Capistrano (Front-end) - [Github](https://github.com/AllanCapistrano) - [Linkedin](https://www.linkedin.com/in/allancapistrano/) - [E-mail](https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=asantos@ecomp.uefs.br)
 
 ## 😉 Onde me encontrar?
 <a href="https://github.com/JoaoErick">
