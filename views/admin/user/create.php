@@ -97,12 +97,6 @@
         </div>
       </div>
 
-      <!-- <div class="row">
-        <div class="col">
-          <button type="submit"> Cadastrar </button>
-        </div>
-      </div> -->
-
       <div class="btn-submit">
         <button type="submit"> Cadastrar </button>
       </div>
