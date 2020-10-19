@@ -99,7 +99,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer-section <?php if($_SESSION['user']->getType() != 'admin'){?>fixed-bottom<?php }?>">
+  <footer class="footer-section fixed-bottom <?php if($_SESSION['user']->getType() != 'admin'){?>fixed-bottom<?php }?>">
     <div class="container">
       <div class="row footer-row align-items-center justify-content-between">
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-4 footer-col">
