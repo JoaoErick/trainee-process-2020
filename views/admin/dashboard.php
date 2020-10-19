@@ -69,25 +69,22 @@
   <main>
     <section id="about" class="about">
       <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-6">
-            <h1>
-                <?php
-                    echo "Olá, ".$_SESSION['user']->getName()."! Seja bem vindo.";
-                ?>
-            </h1>
-
             <p>
                 <?php
                     if($_SESSION['user']->getType() == 'admin'){
                 ?>
-                    <a href="/Treinamento2020/user/index">Listagem de usuários</a>
-                    <a href="/Treinamento2020/user/create">Cadastrar novo usuário</a>
+                    <div class="row align-items-center justify-content-center">
+                      <a href="/Treinamento2020/user/index" class="btn-options">Listagem de usuários</a>
+                    </div>
+                    <div class="row align-items-center justify-content-center">
+                      <a href="/Treinamento2020/user/create" class="btn-options">Cadastrar novo usuário</a>
+                    </div>
                 <?php
                     }
                 ?>
-                    <a href="/Treinamento2020/user/profile">Meu Perfil</a>
-
+                    <div class="row align-items-center justify-content-center">
+                      <a href="/Treinamento2020/user/profile" class="btn-options">Meu Perfil</a>
+                    </div>
                     <?php 
                         if($_SESSION['message'] != ""){
                     ?>
@@ -96,84 +93,13 @@
                         $_SESSION['message'] = "";
                         }
                     ?>
-            </p>
-          </div>
-          <div class="col-3 col-icon">
-            <img src="./assets/ecompjr-logo.png" alt="EcompJr Logo">
-          </div>
-        </div>
+            </p>  
       </div>
     </section>
-
-    <!-- Divider -->
-    <hr class="solid">
-
-    <div class="pillars">
-      <section class="mission">
-        <div class="container">
-        
-        </div>
-      </section>
-
-      <section class="vison">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col">
-              <h2>Visão</h2>
-              <p>
-                Em 2020, <span>desenvolver lideres</span>, <span>comprometidos</span> 
-                e <span>capacitados</span> que entregam <span>resultados</span>.
-              </p>
-            </div>
-            <div class="col">
-              <i class="far fa-eye"></i>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="values">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="col">
-              <h2>Valores</h2>
-              <p>
-                Os valores de uma empresa guiam a conduta da mesma, portanto a 
-                EcompJr. baseia-se nos seguintes valores: <span>Protagonismo, 
-                assiduidade, resiliência, constância em resultados, evolução com 
-                os erros, conexão com o movimento, ética e empatia.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="values">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="col">
-              <h2>Valores</h2>
-              <p>
-                Os valores de uma empresa guiam a conduta da mesma, portanto a 
-                EcompJr. baseia-se nos seguintes valores: <span>Protagonismo, 
-                assiduidade, resiliência, constância em resultados, evolução com 
-                os erros, conexão com o movimento, ética e empatia.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="footer-section">
+  <footer class="footer-section <?php if($_SESSION['user']->getType() != 'admin'){?>fixed-bottom<?php }?>">
     <div class="container">
       <div class="row footer-row align-items-center justify-content-between">
         <div class="col-sm-6 col-md-5 col-lg-4 col-xl-4 footer-col">
