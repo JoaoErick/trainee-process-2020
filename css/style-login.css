@@ -118,5 +118,15 @@ section#conteudo-view form button:hover{
     section#conteudo-view p{ 
         visibility: hidden;
     }
+
+    section#conteudo-view{
+        padding: 40px;
+    }
+ }
+
+ @media(max-height: 485px){
+    section#conteudo-view{
+        padding: 20px;
+    }
  }
 
