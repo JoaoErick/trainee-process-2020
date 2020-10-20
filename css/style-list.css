@@ -2,10 +2,6 @@ html {
     scroll-behavior: smooth;
   }
 
-  main{
-      
-  }
-
   .about .container table{
       border: 3px solid #0070BB;
   }
