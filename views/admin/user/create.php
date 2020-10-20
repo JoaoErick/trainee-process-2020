@@ -67,33 +67,93 @@
     </div>
   </nav>
 
-  <form class="form-group" action="/Treinamento2020/user/store" method="post" onsubmit="return validarSenha()" name="form">
+  <form 
+    class="form-group needs-validation" 
+    action="/Treinamento2020/user/store" 
+    method="post" 
+    onsubmit="return validarSenha()" 
+    name="form" 
+    novalidate
+  >
     <div class="container-fluid">
       <div class="row row-form align-items-center justify-content-center">
         <div class="col-md-5">
-          <input name="name" placeholder="Name" required>
+          <input 
+            class="form-control form" 
+            name="name" 
+            placeholder="Name" 
+            required
+          >
+          <div class="valid-feedback">
+            Tudo certo!
+          </div>
+          <div class="invalid-feedback">
+            Por favor preencha este campo corretamente!
+          </div>
         </div>
         <div class="col-md-5">
-          <input type="email" name="email" placeholder="Email">
+          <input 
+            class="form-control form" 
+            type="email" 
+            name="email" 
+            placeholder="E-mail" 
+            required
+          >
+          <div class="valid-feedback">
+            Tudo certo!
+          </div>
+          <div class="invalid-feedback">
+            Por favor digite um e-mail válido!
+          </div>
         </div>
       </div>
 
       <div class="row row-form align-items-center justify-content-center">
         <div class="col-md-10">
-          <select name="type" required>
-            <option value="">Selecione um tipo</option>
-            <option value="admin">Administrador</option>
-            <option value="user">Usuário comum</option>
+          <select class="form-control form" name="type" required>
+            <option class="form" value="">Selecione um tipo</option>
+            <option class="form" value="admin">Administrador</option>
+            <option class="form" value="user">Usuário comum</option>
           </select>
+          <div class="valid-feedback">
+            Tudo certo!
+          </div>
+          <div class="invalid-feedback">
+            Por favor selecione uma opção válida!
+          </div>
         </div>
       </div>
 
       <div class="row row-form align-items-center justify-content-center">
         <div class="col-md-5">
-          <input type="password" name="password" placeholder="Selecione sua senha" required>
+          <input 
+            class="form-control form" 
+            type="password" 
+            name="password" 
+            placeholder="Selecione sua senha" 
+            required
+          >
+          <div class="valid-feedback">
+            Tudo certo!
+          </div>
+          <div class="invalid-feedback">
+            Por favor preencha este campo corretamente!
+          </div>
         </div>
         <div class="col-md-5">
-          <input type="password" name="password_confirmation" placeholder="Confirme sua senha" required>
+          <input 
+            class="form-control form" 
+            type="password" 
+            name="password_confirmation" 
+            placeholder="Confirme sua senha" 
+            required
+          >
+          <div class="valid-feedback">
+            Tudo certo!
+          </div>
+          <div class="invalid-feedback">
+            Por favor preencha este campo corretamente!
+          </div>
         </div>
       </div>
 
@@ -137,6 +197,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="../../../js/scripts.js"></script>
 
   <script>
     function validarSenha(){
