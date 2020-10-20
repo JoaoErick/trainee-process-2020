@@ -3,7 +3,7 @@ html {
   }
 
   main{
-      height: 400px;
+      
   }
 
   .about .container table{
@@ -16,7 +16,8 @@ html {
 
   .about .container table thead tr th{
       border: 3px solid #0070BB;
-      color: #0070BB;
+      background: #0070BB;
+      color: #fff;
   }
   
   .btn-options{
@@ -42,7 +43,7 @@ html {
   
   /*Section About*/
   .about {
-    margin-top: 80px;
+    margin: 110px 0px;
   }
   
   .about h1 {
