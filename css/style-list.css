@@ -1,0 +1,108 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  main{
+      height: 400px;
+  }
+
+  .about .container table{
+      border: 3px solid #0070BB;
+  }
+
+  .about .container table tbody tr td{
+      border: 1px solid #0070BB;
+  }
+
+  .about .container table thead tr th{
+      border: 3px solid #0070BB;
+      color: #0070BB;
+  }
+  
+  .btn-options{
+    background-color: #0070BB;
+    color: #fff;
+    padding: 6px 20px;
+    margin: 20px 4px;
+    border: 2px solid #0070BB;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 14pt;
+  }
+
+  .btn-options:hover{
+    background-color: #008CEB;
+    border: 2px solid #008CEB;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /*Section About*/
+  .about {
+    margin-top: 80px;
+  }
+  
+  .about h1 {
+    color: #005E9D;
+    font-weight: bold;
+  }
+  
+  .about p {
+    color: #757781;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  @media(max-width: 815px) {
+    .about h1 {
+      font-size: 2rem;
+    }
+    .about p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media(max-width: 770px) {
+    .about h1 {
+      font-size: 1.5rem;
+    }
+
+    .btn-options{
+      font-size: 10pt;
+      height: 80px;
+      margin: 15px 2px;
+    }
+  
+    .about p {
+      font-size: .7rem;
+    }
+  }
+
+  @media(max-width: 555px) {
+    .btn-options{
+      font-size: 8pt;
+      margin: 10px 2px;
+      height: 60px;
+    }
+  }
+
+  @media(max-width: 540px) {
+    .btn-options{
+      padding: 6px 10px;
+      font-size: 7pt;
+      margin: 5px 2px;
+      height: 40px;
+    }
+  }
+
+  @media(max-width: 490px) {
+    .btn-options{
+      padding: 6px 2px;
+      font-size: 7pt;
+      margin: 5px 2px;
+      height: 40px;
+    }
+  }
