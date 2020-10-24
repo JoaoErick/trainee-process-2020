@@ -35,7 +35,7 @@
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../dashboard.php">
       <img src="../../../assets/trainee-ecompjr.png" alt="EcompJr" width="200px">
     </a>
     <button 
